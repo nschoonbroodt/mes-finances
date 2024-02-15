@@ -1,6 +1,9 @@
 use leptos::*;
 use leptos_router::*;
 
+use crate::cto::Cto;
+use crate::home::Home;
+
 #[component]
 pub fn App() -> impl IntoView {
     view! {
@@ -16,9 +19,10 @@ pub fn App() -> impl IntoView {
                 </div>
                 <div class="col-span-3">
                     <main class="col-span-3">
-                        <div>
-                            Hello, World!
-                        </div>
+                        <Routes>
+                            <Route path="/" view=Home/>
+                            <Route path="/CTO" view=Cto/>
+                        </Routes>
                     </main>
                 </div>
             </div>
